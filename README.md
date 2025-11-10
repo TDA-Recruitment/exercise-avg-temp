@@ -3,7 +3,7 @@ This is a backend exercise using Python to integrate with two API calls. The goa
 
 ## High-level description
 You are given an HTTP API endpoint:
-POST `https://gw4favkunc.execute-api.il-central-1.amazonaws.com/auth
+`POST https://gw4favkunc.execute-api.il-central-1.amazonaws.com/auth`
 which returns a short-lived token and metadata about the dataset you must process.
 follow the instructions in the response to fetch data.
 
