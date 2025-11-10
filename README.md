@@ -1,41 +1,39 @@
 # Home Exercise
-This is a frontend exercise using React.js to build a functioning [Tic Tac Toe game](https://en.wikipedia.org/wiki/Tic-tac-toe) that should work the following way:
+This is a backend exercise using Python to integrate with two API calls. The goal is to build a small, robust terminal application that fetches and aggregates paginated weather data while handling auth, retries, and edge cases.
 
-## Objective
-- The first player to go places an **X** anywhere on the board, 
-and then the next player will be able to place an **O**, 
-and it continues alternating like this every turn. 
-- You should also implement a function to determine if any player won by getting 3 **X**'s or **O**'s in a row. 
-- If there is a winner, display a message at the top. If nobody wins, display "Draw". 
-- Finally, you should also implement the reset function that resets the entire board.
+## High-level description
+You are given an HTTP API endpoint:
+POST `https://gw4favkunc.execute-api.il-central-1.amazonaws.com/auth
+which returns a short-lived token and metadata about the dataset you must process.
+follow the instructions in the response to fetch data.
 
-_Ideally, this should take around a few hours finish, but let us know how much time you spent so we can calibrate our expectations!_
+Your task is to write a Python program (a single script or small module) that:
+	•	Calls /auth to obtain:
+	•	an access token (valid for ~60 seconds),
+	•	a request_id (identifying the dataset/city),
+	•	the data_url for
+	•	Uses this information to reliably fetch all pages from data API.
+	•	Computes the average temperature for that city.
+	•	Prints (or returns) the final result in a clear form, e.g.:
+```
+City: venice
+Average temperature: 21.37
+```
 
 ## Hints / Tips
-- You can feel free to use something like `Redux` or `mobX` to store the board, but the exact implementation is up to you!
-- It doesn't have to look pixel perfect with amazing animations, but we do care a lot about UX and usability.
-  - Ideally your components would fit and would be aligned, to make layout easy for your users.
-  - You can (if you want) pick any UI toolkit (Bootstrap, Material, etc.), but try to make everything look consistent.
-- You can see an example example of Tic Tac Toe over [here](https://www.google.com/search?q=tic+tac+toe).
+- You can feel free to use any AI to generate the solution
+- The data API is built in way to respond with error sometime - you should handle that
 
 ## Getting Started
 - Clone or download the repository - do not fork!
-- Run `npm install` & `npm start` Your browser should open up a skeleton React app. You can edit any file in `./src` and in most cases the website will hot-reload.
-- We provided some simple React template code, but feel free to modify it.
-- You can use [Font Awesome](https://fontawesome.com/) for the icons of **O** & **X**.
+- You can edit any file in `./src`.
 - When ready submit your result in one of the following methods:
   - Create a new repository under your own account and send us link
   - Email us a zip file with the source code
 
-For more info, you can check out https://github.com/facebook/create-react-app
-
 ## Requirements
 - The code must compile with no errors.
-- There should be no errors in the browser console.
-- It should work smoothly with Google Chrome.
-
-## Bonus
-- Make the **O** a computer player.
+- The resoponse should contain both the city name and the avarage temperate
 
 ## Questions?
 
