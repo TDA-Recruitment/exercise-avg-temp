@@ -14,10 +14,10 @@ Your task is to write a Python program (a single script or small module) that:
 - The data_url
 - Uses this information to reliably fetch all pages from data API.
 - Computes the average temperature for that city.
-- Prints the final result in a clear form, e.g.:
+- Prints the final result in a clear form (up to 3 digits after the comma), e.g.:
 ```
 City: venice
-Average temperature: 21.37
+Average temperature: 20.175
 ```
 
 ## Hints / Tips
