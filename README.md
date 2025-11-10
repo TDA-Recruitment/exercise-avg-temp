@@ -8,13 +8,13 @@ which returns a short-lived token and metadata about the dataset you must proces
 follow the instructions in the response to fetch data.
 
 Your task is to write a Python program (a single script or small module) that:
-•	Calls /auth to obtain:
-•	an access token (valid for ~60 seconds),
-•	a request_id (identifying the dataset/city),
-•	the data_url for
-•	Uses this information to reliably fetch all pages from data API.
-•	Computes the average temperature for that city.
-•	Prints (or returns) the final result in a clear form, e.g.:
+- Calls /auth to obtain:
+- An access token (valid for ~60 seconds),
+- A request_id (identifying the dataset/city),
+- The data_url
+- Uses this information to reliably fetch all pages from data API.
+- Computes the average temperature for that city.
+- Prints the final result in a clear form, e.g.:
 ```
 City: venice
 Average temperature: 21.37
